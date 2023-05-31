@@ -1,3 +1,7 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class MyGraph {
     public class Edge<Vertex> {
         private Vertex source;
@@ -8,5 +12,8 @@ public class MyGraph {
             this.dest = dest;
             this. weight = weight;
         }
+    }
+    public class WeightedGraph<Vertex> {
+        private Map<Vertex, List<Edge<Vertex>>> map = new HashMap<>();
     }
 }
