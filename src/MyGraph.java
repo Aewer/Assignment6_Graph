@@ -16,4 +16,11 @@ public class MyGraph {
     public class WeightedGraph<Vertex> {
         private Map<Vertex, List<Edge<Vertex>>> map = new HashMap<>();
     }
+    public class Vertex<V> {
+        private V data;
+        private Map<Vertex<V>, Double> adjacentVertices;
+        public void addAdjacentVertex(Vertex<V> destination, double weight) {
+            adjacentVertices.put(destination, weight);
+        }
+    }
 }
