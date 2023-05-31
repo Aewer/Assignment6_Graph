@@ -18,9 +18,16 @@ public class MyGraph {
     }
     public class Vertex<V> {
         private V data;
+        public Vertex(V data) {
+            this.data = data;
+        }
         private Map<Vertex<V>, Double> adjacentVertices;
         public void addAdjacentVertex(Vertex<V> destination, double weight) {
             adjacentVertices.put(destination, weight);
         }
     }
+    public void addVertex(Vertex vertex) {
+        map.put(vertex, new LinkedList<>());
+    }
+
 }
